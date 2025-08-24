@@ -1,35 +1,9 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Cambiar color cuando el scroll pase aproximadamente la sección del interludio
-      const scrollPosition = window.scrollY
-      const interludioThreshold = 950 // Ajusta este valor según la altura de tu sección interludio
-      
-      if (scrollPosition > interludioThreshold) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-violet-900/90 backdrop-blur-md shadow-lg' 
-        : 'bg-neutral-900 shadow-sm'
-    }`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-900 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
@@ -100,11 +74,7 @@ export default function Navbar() {
           </nav>
           
           {/* Button - Responsive sizing */}
-          <button className={`px-4 py-2 md:px-6 md:py-2 rounded-lg hover:shadow-lg transition-all duration-300 text-sm md:text-base ${
-            isScrolled 
-              ? 'bg-neutral-800/90 text-white hover:bg-gray-900' 
-              : 'bg-gradient-to-r from-violet-900 to-cyan-800 text-white hover:from-violet-800 hover:to-cyan-700'
-          }`}>
+          <button className="bg-gradient-to-r from-violet-900 to-cyan-800 text-white px-4 py-2 md:px-6 md:py-2 rounded-lg hover:shadow-lg transition-shadow text-sm md:text-base">
             ¡Probar Ahora!
           </button>
         </div>

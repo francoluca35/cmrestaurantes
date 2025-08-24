@@ -100,11 +100,7 @@ export default function Navbar() {
           </nav>
           
           {/* Button - Responsive sizing */}
-          <button className={`px-4 py-2 md:px-6 md:py-2 rounded-lg hover:shadow-lg transition-all duration-300 text-sm md:text-base ${
-            isScrolled 
-              ? 'bg-neutral-800/90 text-white hover:bg-gray-900' 
-              : 'bg-gradient-to-r from-violet-900 to-cyan-800 text-white hover:from-violet-800 hover:to-cyan-700'
-          }`}>
+          <button className="bg-gradient-to-r from-violet-900 to-cyan-800 text-white px-4 py-2 md:px-6 md:py-2 rounded-lg hover:shadow-lg transition-shadow text-sm md:text-base">
             ¡Probar Ahora!
           </button>
         </div>

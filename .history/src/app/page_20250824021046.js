@@ -17,11 +17,11 @@ export default function Home() {
         {/* Chef Section */}
         <ChefSection />
         
-        {/* Features Grid Section */}
-        <FeaturesGrid />
-        
         {/* Aplicacion Section */}
         <AplicacionSection />
+        
+        {/* Features Grid Section */}
+        <FeaturesGrid />
       </div>
     </main>
   )
