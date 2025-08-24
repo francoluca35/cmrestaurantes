@@ -34,9 +34,6 @@ export default function Home() {
         {/* Contacto Section */}
         <Contacto />
       </div>
-      
-      {/* Footer */}
-      <Footer />
     </main>
   )
 }
