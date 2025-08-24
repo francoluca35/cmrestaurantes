@@ -27,8 +27,7 @@ export default function Home() {
         
   
         {/* Precio Section */}
-        <PrecioSection />     
-         {/* Contador Section */}
+        <PrecioSection />      {/* Contador Section */}
         <Contador />
         
       </div>
