@@ -17,7 +17,7 @@ export default function Hero() {
                 alt="Pantalla principal del sistema"
                 width={800}
                 height={800}
-                className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:hidden h-auto object-contain"
+                className="w-full sm:w-full xl:hidden h-auto object-contain"
                 priority
               />
               
@@ -27,7 +27,7 @@ export default function Hero() {
                 alt="Pantalla principal del sistema"
                 width={800}
                 height={800}
-                className="hidden xl:block max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] h-auto object-contain"
+                className="hidden xl:block  max-w-[4000px] h-auto object-contain"
                 priority
               />
               
@@ -46,7 +46,7 @@ export default function Hero() {
               </span>
             </h1>
             
-            <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+            <div className="space-y-4 mb-8">
               <p className="text-lg md:text-xl text-gray-100">
                 <span className="font-semibold text-cyan-500">Tenemos la solución a todos tus problemas. </span><br />
                Hace que tu rendimiento sea mas rapido y eficiente.
