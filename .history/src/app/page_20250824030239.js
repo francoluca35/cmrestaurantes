@@ -25,12 +25,11 @@ export default function Home() {
         {/* Aplicacion Section */}
         <AplicacionSection />
         
-  
-        {/* Precio Section */}
-        <PrecioSection />     
-         {/* Contador Section */}
+        {/* Contador Section */}
         <Contador />
         
+        {/* Precio Section */}
+        <PrecioSection />
       </div>
     </main>
   )
