@@ -1,0 +1,92 @@
+import Image from 'next/image'
+
+export default function Hero() {
+  return (
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto">
+        {/* Device Showcase - Imágenes más grandes y mejor espaciadas */}
+        <div className="relative flex justify-center items-center mb-20">
+          <div className="relative flex justify-center items-center">
+            {/* Main Tablet (Center) - pantalla3.png */}
+            <div className="relative z-20 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+              <div className="w-96 h-[500px] bg-gray-900 rounded-3xl shadow-2xl border-4 border-gray-800 relative overflow-hidden">
+                <img
+                  src="/Assets/pantalla3.png"
+                  alt="Pantalla principal del sistema"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
+
+            {/* Left Tablet - pantalla1.png */}
+            <div className="absolute -left-20 top-16 transform -rotate-8 hover:rotate-0 transition-transform duration-300 z-10">
+              <div className="w-80 h-96 bg-gray-900 rounded-3xl shadow-xl border-4 border-gray-800 relative overflow-hidden">
+                <img
+                  src="/Assets/pantalla1.png"
+                  alt="Dashboard de gestión"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
+
+            {/* Right Tablet - pantalla2.png */}
+            <div className="absolute -right-20 top-20 transform rotate-8 hover:rotate-0 transition-transform duration-300 z-10">
+              <div className="w-80 h-96 bg-gray-900 rounded-3xl shadow-xl border-4 border-gray-800 relative overflow-hidden">
+                <img
+                  src="/Assets/pantalla2.png"
+                  alt="Sistema de cocina"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
+
+            {/* Smartphone - Gestión de mesas restaurante móvil.png */}
+            <div className="absolute -bottom-12 right-12 transform rotate-15 hover:rotate-0 transition-transform duration-300 z-30">
+              <div className="w-40 h-56 bg-gradient-to-br from-pink-400 to-purple-500 rounded-3xl shadow-xl border-4 border-pink-300 relative overflow-hidden">
+                <img
+                  src="/Assets/Gestión de mesas restaurante móvil.png"
+                  alt="App móvil de gestión"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Texto centrado abajo en grande */}
+        <div className="text-center">
+          <h1 className="text-7xl md:text-9xl font-bold text-gray-900 mb-10">
+            Somos la app gastronómica
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
+              que querés.
+            </span>
+          </h1>
+          
+          <div className="space-y-8 mb-16">
+            <p className="text-3xl text-gray-700">
+              <span className="font-semibold text-pink-500">+ Simplificamos,</span><br />
+              para que nada falle.
+            </p>
+            <p className="text-3xl text-gray-700">
+              <span className="font-semibold text-pink-500">+ Diseñamos,</span><br />
+              para que todo sea fácil.
+            </p>
+            <p className="text-3xl text-gray-700">
+              <span className="font-semibold text-pink-500">+ Innovamos,</span><br />
+              para hacerlo mejor.
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-10 py-5 rounded-xl text-xl font-semibold hover:shadow-2xl transition-all duration-200 transform hover:scale-105">
+              ¡Probalo Ahora!
+            </button>
+            <button className="border-2 border-pink-500 text-pink-500 px-10 py-5 rounded-xl text-xl font-semibold hover:bg-pink-50 transition-colors">
+              Ver Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
