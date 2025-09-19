@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Animación para gradientes en movimiento */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Animación que se mueve entre botones */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-gradient-flow {
+  background-size: 300% 200%;
+  animation: gradient-flow 4s ease-in-out infinite;
+}
