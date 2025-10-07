@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { useSearchParams } from 'next/navigation'
 import SelectorMoneda from '@/components/registro/SelectorMoneda'
 
-export default function RegistroPage() {
+function RegistroPageContent() {
   const searchParams = useSearchParams()
   const planSeleccionado = searchParams.get('plan') || 'mensual'
   const precio = searchParams.get('precio') || '$42/mes'
@@ -660,5 +660,20 @@ export default function RegistroPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function RegistroPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Cargando formulario de registro...</p>
+        </div>
+      </div>
+    }>
+      <RegistroPageContent />
+    </Suspense>
   )
 }
