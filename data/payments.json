@@ -1,0 +1,38 @@
+[
+  {
+    "id": "PAY_1758424752495_4a85zc7qd",
+    "restaurantId": "REST_1758424752495_mzwvcsurp",
+    "metodoPago": "pago_prueba",
+    "monto": 734160,
+    "moneda": "ars",
+    "transactionId": "TEST_1758424752496_ui25qst16",
+    "status": "approved",
+    "fechaPago": "2025-09-21T03:19:12.496Z",
+    "datosAdicionales": {
+      "tipo": "pago_prueba",
+      "datosRestaurante": {
+        "plan": "anual",
+        "precio": 420,
+        "totalFinal": 734160,
+        "moneda": "ars",
+        "nombreRestaurante": "prueba web",
+        "nombrePropietario": "prueba web",
+        "dniPropietario": "12345678",
+        "email": "restaurante@ejemplo.com",
+        "telefono": "+54 11 1234-5678",
+        "direccion": "Av. Corrientes 1234, CABA",
+        "conFinanzas": "no",
+        "cantidadDispositivos": 3,
+        "codigoActivacion": "PRUEBAWEB",
+        "password": "admin",
+        "logoUrl": "https://ejemplo.com/logo.png",
+        "precioBase": 420,
+        "periodicidad": "anual",
+        "timestamp": "2025-09-21T03:12:25.987Z",
+        "total": 734160
+      },
+      "timestamp": "2025-09-21T03:19:12.496Z"
+    },
+    "timestamp": "2025-09-21T03:19:12.496Z"
+  }
+]
