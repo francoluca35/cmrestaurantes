@@ -1,0 +1,27 @@
+[
+  {
+    "id": "REST_1758424752495_mzwvcsurp",
+    "nombre": "prueba web",
+    "propietario": "prueba web",
+    "email": "restaurante@ejemplo.com",
+    "telefono": "+54 11 1234-5678",
+    "direccion": "Av. Corrientes 1234, CABA",
+    "dni": "12345678",
+    "codigoActivacion": "PRUEBAWEB",
+    "periodicidad": "anual",
+    "cantUsuarios": 3,
+    "finanzas": false,
+    "activado": true,
+    "fechaRegistro": "2025-09-21T03:19:12.495Z",
+    "fechaActivacion": "2025-09-21T03:19:12.496Z",
+    "plan": "anual",
+    "precioBase": 420,
+    "precioTotal": 734160,
+    "moneda": "ars",
+    "logoUrl": "https://ejemplo.com/logo.png",
+    "password": "admin",
+    "timestamp": "2025-09-21T03:19:12.496Z",
+    "version": "1.0",
+    "metodoRegistro": "pago_prueba"
+  }
+]
