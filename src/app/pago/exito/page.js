@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 
-export default function PagoExito() {
+function PagoExitoContent() {
   const searchParams = useSearchParams()
   const [datosPago, setDatosPago] = useState(null)
 
@@ -104,5 +104,20 @@ export default function PagoExito() {
         </motion.div>
       </motion.div>
     </div>
+  )
+}
+
+export default function PagoExito() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Cargando...</p>
+        </div>
+      </div>
+    }>
+      <PagoExitoContent />
+    </Suspense>
   )
 }
