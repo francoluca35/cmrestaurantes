@@ -1,13 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { useSearchParams } from 'next/navigation'
 import TarjetaModal from '@/components/pago/TarjetaModal'
 import TransferenciaModal from '@/components/pago/TransferenciaModal'
 import useDolar from '@/hooks/useDolar'
 
-export default function PagoPage() {
+function PagoPageContent() {
   const searchParams = useSearchParams()
   
   // Obtener datos del formulario anterior
@@ -549,5 +549,20 @@ export default function PagoPage() {
         moneda={moneda}
       />
     </div>
+  )
+}
+
+export default function PagoPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Cargando página de pago...</p>
+        </div>
+      </div>
+    }>
+      <PagoPageContent />
+    </Suspense>
   )
 }
