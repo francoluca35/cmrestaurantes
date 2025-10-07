@@ -16,7 +16,7 @@ const SelectorMoneda = ({ total, onMonedaChange, onTotalChange }) => {
       const totalEnPesos = convertirAPesos(total, 0.15)
       onTotalChange(totalEnPesos)
     }
-  }, [moneda, valorDolar]) // Solo cuando cambie la moneda o el valor del dólar
+  }, [moneda, valorDolar, convertirAPesos, onTotalChange, total]) // Incluir todas las dependencias
 
   const handleMonedaChange = (nuevaMoneda) => {
     setMoneda(nuevaMoneda)
@@ -43,7 +43,7 @@ const SelectorMoneda = ({ total, onMonedaChange, onTotalChange }) => {
     >
       <h3 className="text-lg font-semibold text-white">Moneda de Pago</h3>
       <p className="text-gray-400 text-sm mb-4">
-        Selecciona la moneda en la que deseas pagar. Después haz clic en "Ir a pagar" para continuar.
+        Selecciona la moneda en la que deseas pagar. Después haz clic en &quot;Ir a pagar&quot; para continuar.
       </p>
       
       <div className="grid grid-cols-2 gap-4">
